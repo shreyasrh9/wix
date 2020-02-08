@@ -37,6 +37,10 @@ body {
     margin: 0 auto;
 }
 
+
+.section-hero-text-recruitment {
+    margin-bottom: 10px;
+}
 /* ----------HEADINGS--------------------- */
 
 h1,
@@ -76,15 +80,10 @@ h4 {
     margin-bottom: 15px;
 }
 
-.typewriter h5 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+h5 {
+    font-size: 80%;
+    margin-bottom: 15px;
+    color: #fff;
   }
 
   /* The typing effect */
@@ -118,7 +117,6 @@ section {
 .long-copy {
     line-height: 145%;
     width: 70%;
-    margin-left: 15%;
 }
 
 .box {
@@ -154,10 +152,9 @@ section {
 
 .icon-small {
     display: inline-block;
-    width: 30px;
     text-align: center;
     color: #e67e22;
-    font-size: 120%;
+    font-size: 190%;
 
     /* secrets to align text and icons*/
     line-height: 120%;
@@ -231,7 +228,11 @@ input[type=submit] {
 /* HEADER */
 /* ------------------------------- */
 
-header {
+header,
+.recruitment-header,
+.aboutUs-header,
+.language-training-header,
+.software-training-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/cover.jpg);
     background-size: cover;
     background-position: center;
@@ -239,12 +240,34 @@ header {
     background-attachment: fixed;
 }
 
-.hero-text-box {
+.recruitment-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/recruitment.jpg);
+}
+
+.aboutUs-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/dictionary.jpg);
+}
+
+.language-training-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/london.jpg);
+}
+
+.software-training-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/san-francisco.jpg);
+}
+
+.hero-text-box,
+.hero-text-box-recruitment {
     position: absolute;
     width: 1140px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+
+.hero-text-box-recruitment a {
+    margin: 15% 0 0 0;
 }
 
 .logo {
@@ -255,14 +278,29 @@ header {
 }
 
 .main-nav {
-    float: right;
     list-style: none;
     margin-top: 55px;
 }
 
 .main-nav li {
-    display: inline-block;
-    margin-left: 40px;
+    float: left;
+    margin-left: 30px;
+    width: 110px;
+    text-align: center;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    display: block;
+}
+
+.main-nav li ul li {
+    width: max-content;
+    text-align: center;
+}
+
+.main-nav li ul {
+    display: none;
 }
 
 .main-nav li a:link,
@@ -281,6 +319,10 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+.main-nav li:hover ul {
+    display: table-row;
+    list-style: none;
+}
 /* ------------------------------- */
 /* FEATURES */
 /* ------------------------------- */
